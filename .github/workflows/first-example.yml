@@ -3,13 +3,14 @@ on: push
 jons:
   first_job:
     runs-on: ubuntu-latest
-    
+
     steps:
-    -name: Welcome message
-     run: echo "My first Github Actions Job"
+        -uses: actions/checkout@main
+        -name: Welcome message
+         run: echo "My first Github Actions Job"
 
-    -name: List files
-     run: ls 
+        -name: List files
+         run: ls 
 
-    -name: Read file
-     run: cat README.md
+        -name: Read file
+         run: cat README.md
