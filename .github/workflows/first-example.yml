@@ -1,11 +1,12 @@
 name: my first workflow
 on: push
-jons:
+jobs:
   first_job:
     runs-on: ubuntu-latest
 
     steps:
-        -uses: actions/checkout@main
+        -name: checkout repository
+         uses: actions/checkout@main
         -name: Welcome message
          run: echo "My first Github Actions Job"
 
